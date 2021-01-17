@@ -1,0 +1,53 @@
+.features h3 {
+  margin-top: 30px;
+}
+
+.features-list {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & .item::before {
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 120px;
+    background-color: $radiobutton-background-color;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & .item:nth-child(1)::before {
+    background-image: url(../images/svg/antenna.svg);
+  }
+  & .item:nth-child(2)::before {
+    background-image: url(../images/svg/clock.svg);
+  }
+
+  & .item:nth-child(3)::before {
+    background-image: url(../images/svg/diagram.svg);
+  }
+
+  & .item:nth-child(4)::before {
+    background-image: url(../images/svg/astronaut.svg);
+  }
+}
+
+.features .item + .item {
+  margin-top: 30px;
+}
+
+.features .feature-header {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.features .feature-text {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 450px;
+}

@@ -1,0 +1,156 @@
+.header {
+  position: relative;
+  color: $secondary-background-color;
+  border-bottom: 1px solid #ececec;
+
+  & .container {
+    // display: flex;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.logo {
+  font-family: Raleway;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  &-accent {
+    color: $accent-color;
+  }
+}
+
+.nav {
+  display: block;
+  // display: flex;
+}
+
+.nav .item + .item {
+  margin-top: 40px;
+  // margin-left: 50px;
+}
+
+.contact {
+  color: $main-color;
+  display: block;
+  // display: flex;
+  margin-top: 60px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contact .item + .item {
+  margin-top: 16px;
+  // margin-left: 50px;
+}
+
+.nav .link {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  color: $h-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact .link {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 500;
+  font-style: normal;
+
+  color: $main-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact svg {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header .current {
+  position: relative;
+  color: $accent-color;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: calc(0px + -1px);
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    fill: $accent-color;
+  }
+
+  & .icon-menu {
+    display: none;
+  }
+
+  &.is-open .icon-menu {
+    display: block;
+  }
+
+  &.is-open .icon-cross {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: $main-background-color;
+
+  &.is-open {
+    display: block;
+  }
+}

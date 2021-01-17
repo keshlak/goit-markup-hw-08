@@ -1,0 +1,70 @@
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f5f4fa;
+}
+
+.team .team-members {
+  margin-top: 30px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-members .item {
+  width: 450px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  & + .item {
+    margin-top: 30px;
+  }
+}
+
+.team-members .item img {
+  display: block;
+  width: 450px;
+}
+
+.team-members .member-about {
+  background-color: #fff;
+  padding: 30px 122px;
+}
+
+.member-about-description {
+  margin-top: 10px;
+}
+
+.social {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+}
+
+.social-item a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-align: center;
+  fill: $svg-fill;
+
+  background-color: inherit;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+}
+
+.social-item a {
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: #fff;
+  }
+}

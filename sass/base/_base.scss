@@ -1,0 +1,46 @@
+p {
+  margin: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--h-color);
+  margin: 0;
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: $mobile;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
