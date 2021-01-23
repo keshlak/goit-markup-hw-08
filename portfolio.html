@@ -16,36 +16,47 @@
             <nav class="header-nav">
                 <a class="logo" href="https://keshlak.github.io/goit-markup-hw-07/"><span
                         class="logo-accent">Web</span>Studio</a>
+
+                <button type="button" class="menu-button is-open" data-menu-button aria-expanded="false">
+                    <svg width="40px" height="40px">
+                        <use class="icon-menu" href="./images/svg/symbol-defs.svg#menu"></use>
+                        <use class="icon-cross" href="./images/svg/symbol-defs.svg#close"></use>
+                    </svg>
+                </button>
+
+            </nav>
+
+            <!-- Contacts -->
+
+
+            <div class="menu-container" data-menu>
                 <ul class="nav">
                     <li class="item"><a class="link" href="./index.html">Студия </a></li>
                     <li class="item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
                     <li class="item"><a class="link" href="">Контакты</a></li>
                 </ul>
-            </nav>
+                <ul class="contact">
+                    <li class="item">
+                        <a class="link" href="mailto:info@devstudio.com">
+                            <svg class="mail" width="16px" height="12px">
+                                <use href="./images/svg/symbol-defs.svg#mail">
 
-            <!-- Contacts -->
-
-            <ul class="contact">
-                <li class="item">
-                    <a class="link" href="mailto:info@devstudio.com">
-                        <svg class="mail" width="16px" height="12px">
-                            <use href="./images/svg/symbol-defs.svg#mail">
-
+                                </use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="tel:+380961111111">
+                            <svg class="phone" width="10px" height="16px">
+                                <use href="./images/svg/symbol-defs.svg#smartphone">
+                            </svg>
                             </use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="link" href="tel:+380961111111">
-                        <svg class="phone" width="10px" height="16px">
-                            <use href="./images/svg/symbol-defs.svg#smartphone">
-                        </svg>
-                        </use>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -313,6 +324,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

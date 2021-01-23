@@ -97,16 +97,16 @@
 }
 
 .backdrop .license-text {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 35px;
-  font-size: 14px;
+  margin-left: 20px;
+  font-size: 12px;
   line-height: 2;
 
   &::before {
     position: absolute;
-    left: 12px;
+    left: 0;
     display: block;
     content: '';
     width: 16px;

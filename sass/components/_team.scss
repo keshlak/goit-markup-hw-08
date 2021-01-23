@@ -1,4 +1,5 @@
 .team {
+  max-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #f5f4fa;
@@ -13,7 +14,7 @@
 }
 
 .team-members .item {
-  width: 450px;
+  max-width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -25,7 +26,8 @@
 
 .team-members .item img {
   display: block;
-  width: 450px;
+  max-width: 100%;
+  height: auto;
 }
 
 .team-members .member-about {

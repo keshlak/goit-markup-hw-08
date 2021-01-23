@@ -1,5 +1,9 @@
 .features {
-  width: auto;
+  max-width: 480px;
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
 }
 
 .features h3 {

@@ -1,5 +1,5 @@
 .header {
-  width: auto;
+  max-width: 480px;
   position: relative;
   color: $secondary-background-color;
   border-bottom: 1px solid #ececec;
@@ -7,10 +7,25 @@
   & .container {
     // display: flex;
   }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+}
+
+.header-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    //   padding-top: 21px;
+    //   padding-bottom: 21px;
+    //   padding-right: 15px;
+  }
 }
 
 .header-nav {
   display: flex;
+  // display: inline-block;
   align-items: center;
   justify-content: space-between;
   padding-top: 16px;
@@ -33,16 +48,30 @@
   &-accent {
     color: $accent-color;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .nav {
   display: block;
   // display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .nav .item + .item {
   margin-top: 40px;
   // margin-left: 50px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 50px;
+    margin-top: 0;
+  }
 }
 
 .contact {
@@ -52,11 +81,32 @@
   margin-top: 60px;
   align-items: center;
   margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 84px;
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: 305px;
+  }
 }
 
 .contact .item + .item {
-  margin-top: 16px;
-  // margin-left: 50px;
+  @media screen and (max-width: 479px) {
+    margin-top: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    //     margin-top: 0;
+    margin-left: 30px;
+  }
 }
 
 .nav .link {
@@ -74,6 +124,10 @@
   &:focus {
     color: $accent-color;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .contact .link {
@@ -81,6 +135,7 @@
   line-height: 1.15;
   font-weight: 500;
   font-style: normal;
+  vertical-align: middle;
 
   color: $main-color;
   transition-property: color;
@@ -90,6 +145,16 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -101,10 +166,12 @@
 .header .current {
   position: relative;
   color: $accent-color;
+  padding-bottom: 8px;
 
   &::after {
     position: absolute;
     left: 0;
+
     bottom: calc(0px + -1px);
     content: '';
     width: 100%;
@@ -136,22 +203,32 @@
   &.is-open .icon-cross {
     display: none;
   }
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
 }
 
 .menu-container {
-  display: none;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
   background-color: $main-background-color;
 
-  &.is-open {
-    display: block;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 0;
+    // margin-left: 88px;
   }
 }

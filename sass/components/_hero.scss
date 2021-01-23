@@ -1,5 +1,5 @@
 .hero {
-  width: auto;
+  max-width: 480px;
   background-color: $secondary-background-color;
 
   background-image: linear-gradient(
@@ -9,10 +9,15 @@
     ),
     url(../images/hero-img.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
 }
 
 .hero-header {

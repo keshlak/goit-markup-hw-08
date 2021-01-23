@@ -1,5 +1,5 @@
 .clients {
-  width: auto;
+  max-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -25,10 +25,10 @@
 }
 
 .client-list .client-link {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 83px;
-  padding-right: 83px;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  // padding-left: 83px;
+  // padding-right: 83px;
   display: flex;
   // align-items: center;
   // justify-content: center;
