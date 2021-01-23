@@ -1,11 +1,3 @@
-.features {
-  max-width: 480px;
-
-  @media screen and (min-width: $tablet) {
-    width: 768px;
-  }
-}
-
 .features h3 {
   margin-top: 30px;
 }
@@ -39,10 +31,32 @@
   & .item:nth-child(4)::before {
     background-image: url(../images/svg/astronaut.svg);
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.features-list .item {
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
 }
 
 .features .item + .item {
-  margin-top: 30px;
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+  }
 }
 
 .features .feature-header {
@@ -50,7 +64,10 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features .feature-text {

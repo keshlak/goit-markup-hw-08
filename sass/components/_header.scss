@@ -1,35 +1,31 @@
 .header {
-  max-width: 480px;
   position: relative;
   color: $secondary-background-color;
   border-bottom: 1px solid #ececec;
 
-  & .container {
-    // display: flex;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+    }
+    @media screen and (min-width: 768px) {
+      //   padding-top: 21px;
+      //   padding-bottom: 21px;
+      //   padding-right: 15px;
+    }
   }
 
   @media screen and (min-width: $tablet) {
-    width: 768px;
-  }
-}
-
-.header-container {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    //   padding-top: 21px;
-    //   padding-bottom: 21px;
-    //   padding-right: 15px;
   }
 }
 
 .header-nav {
-  display: flex;
+  // display: flex;
   // display: inline-block;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  // align-items: center;
+  // justify-content: space-between;
 }
 
 .header-nav .link {
@@ -39,6 +35,8 @@
 }
 
 .logo {
+  // padding-top: 16px;
+  // padding-bottom: 16px;
   font-family: Raleway;
   display: inline-block;
   font-weight: 700;
@@ -51,16 +49,25 @@
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
+    line-height: 1.15;
+    // padding-top: 26px;
+    // padding-bottom: 26px;
   }
 }
 
 .nav {
   display: block;
-  // display: flex;
 
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+  }
+}
+
+.nav .item {
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -86,6 +93,8 @@
     margin-left: 84px;
     margin-top: 0px;
     text-align: left;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -178,13 +187,21 @@
     height: 4px;
     border-radius: 2px;
     background-color: $accent-color;
+
+    @media screen and (min-width: 768px) {
+      bottom: -36px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0px;
   }
 }
 
 .menu-button {
   display: inline-flex;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   border: none;
   background-color: transparent;
 
@@ -214,6 +231,7 @@
   padding-bottom: 60px;
   text-align: center;
   background-color: $main-background-color;
+  z-index: 999;
 
   @media screen and (max-width: 767px) {
     display: none;

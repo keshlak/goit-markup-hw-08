@@ -10,6 +10,17 @@
   display: block;
   text-align: center;
 
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
   // display: flex;
   // align-items: baseline;
 }
@@ -20,14 +31,24 @@
 }
 
 .footer .contact {
-  margin-top: 20px;
+  margin-left: 0px;
   color: #ffffff;
 }
 
 .footer .footer-links {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 40%;
+    margin: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer .link {
@@ -35,6 +56,10 @@
   font-size: 14px;
   line-height: 1.7;
   font-style: normal;
+}
+
+.footer .adress {
+  text-align: center;
 }
 
 .adress-link {
@@ -52,14 +77,25 @@
 }
 
 .footer-subscribe {
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+    flex-grow: 2;
+  }
 }
 
 .footer .subscribe-form {
   // display: flex;
   margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .subscribe-input {
@@ -82,11 +118,10 @@
 }
 
 .subscribe-button {
-  margin-top: 20px;
   position: relative;
-  width: 200px;
+  min-width: 200px;
   height: 50px;
-  margin-left: 12px;
+
   padding: 10px 30px;
   background-color: $accent-color;
   color: $main-background-color;
@@ -116,6 +151,13 @@
 
     transform: translateY(-50%);
   }
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+    margin-left: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 
 .footer h3 {
@@ -137,6 +179,19 @@
 
   & .social {
     margin-top: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 40%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 70px;
+    margin-right: 0;
   }
 }
 
