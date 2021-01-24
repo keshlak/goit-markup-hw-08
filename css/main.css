@@ -956,7 +956,7 @@ body.modal-open {
 
 @media screen and (min-device-pixel-ratio: 1.4) {
   .hero {
-    background-image: url(../../images/hero-img_480@2.jpg);
+    background-image: url(/images/hero-img_480@2.jpg);
   }
 }
 
