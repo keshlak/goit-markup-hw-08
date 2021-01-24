@@ -944,8 +944,8 @@ body.modal-open {
 .hero {
   max-width: 1600px;
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(/images/hero-img_480.jpg);
-  background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(/images/hero-img_480.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(../images/hero-img_480.jpg);
+  background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(../images/hero-img_480.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -954,9 +954,40 @@ body.modal-open {
   text-align: center;
 }
 
-@media screen and (min-device-pixel-ratio: 1.4) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(/images/hero-img_480@2.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(../images/hero-img_480@2.jpg);
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(../images/hero-img_480@2.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(../images/hero-img_768.jpg);
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(../images/hero-img_768.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(../images/hero-img_768@2.jpg);
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(../images/hero-img_768@2.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(../images/hero-img_1200.jpg);
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(../images/hero-img_1200.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), color-stop(47%, rgba(47, 48, 58, 0.4))), url(../images/hero-img_1200@2.jpg);
+    background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 47%), url(../images/hero-img_1200@2.jpg);
   }
 }
 
@@ -1623,7 +1654,7 @@ body.modal-open {
 
 @media screen and (min-width: 480px) {
   .modal {
-    top: 50%;
+    top: 150%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
